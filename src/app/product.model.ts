@@ -4,3 +4,7 @@ export interface Product{
   image: string;
   category?: string;
 }
+
+export interface Register{
+
+}

@@ -1,3 +1,26 @@
+<h1>Formulario</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <div class="input-group">
+    <label for="">Nombre</label>
+    <input type="text" name="name" required id="name" [(ngModel)]="register.name">
+    <p>Mensajes de error</p>
+
+    <div class="input-group">
+      <label for="">Email</label>
+      <input type="email" name="email"  required id="email" [(ngModel)]="register.email">
+      <p>Mensajes de error</p>
+    </div>
+
+    <div class="input-group">
+      <label for="">Contraseña</label>
+      <input type="password" name="password" required id="password" [(ngModel)]="register.password">
+      <p>Mensajes de error</p>
+    </div>
+
+  </div>
+  <button [disabled]="myForm.invalid" type="submit">Registrar</button>
+</form>
+<hr>
 <h1>Class & Style</h1>
 <input type="text" required #nameInput2 ="ngModel" [(ngModel)]="nameP">
 <p class="mensage-error" [class.invalid]="nameInput2.invalid"> El campo es required</p>
@@ -5,6 +28,8 @@
 <input type="text" required #nameInput3 ="ngModel" [(ngModel)]="nameP">
 <p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Soy un texto Soy un texto Soy un texto</p>
 <hr>
+
+
 <div>
   <input type="text" #nameInput4 ="ngModel" [(ngModel)]="windthImg">
   <div>

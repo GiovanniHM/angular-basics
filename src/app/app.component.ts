@@ -61,6 +61,12 @@ export class AppComponent {
     progressValor: 33
   }
 
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
+
   toogleButton(){
     this.btnStatus = !this.btnStatus;
   }
@@ -91,6 +97,10 @@ export class AppComponent {
   DeletEmoji(index: number){
     this.arrayEmos.splice(index, 1);
 
+  }
+
+  onRegister(){
+    console.log(this.register)
   }
 
 }
