@@ -1,3 +1,18 @@
+<h1>Class & Style</h1>
+<input type="text" required #nameInput2 ="ngModel" [(ngModel)]="nameP">
+<p class="mensage-error" [class.invalid]="nameInput2.invalid"> El campo es required</p>
+<label for="">Nombre</label>
+<input type="text" required #nameInput3 ="ngModel" [(ngModel)]="nameP">
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Soy un texto Soy un texto Soy un texto</p>
+<hr>
+<div>
+  <input type="text" #nameInput4 ="ngModel" [(ngModel)]="windthImg">
+  <div>
+   <img [style.width.px]="windthImg" src="./assets/images/toy.jpg" alt="">
+  </div>
+</div>
+
+
 <h1>[ngSwitch]</h1>
 <input type="text" #ngif ="ngModel" [(ngModel)]="nameP">
 
@@ -17,9 +32,9 @@
 
 <h1>*ngFor Objs</h1>
 
-<div>
+<div class="products-grid">
   <div *ngFor="let product of products">
-    <img width="250" [src]="product.image" alt="image">
+    <img  [src]="product.image" alt="image">
     <h2>{{product.price}}</h2>
     <p>{{product.name}}</p>
   </div>

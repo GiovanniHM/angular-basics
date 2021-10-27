@@ -4,7 +4,7 @@ import { Product } from './product.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'angular-basics';
@@ -12,6 +12,7 @@ export class AppComponent {
   arrayEmos: string[] =[ '😂' , '🐦', '🐳','🌮', '💚']
   newEmoji: string;
   nameP: string;
+  windthImg =10;
 
   products :Product[] =[
     {
