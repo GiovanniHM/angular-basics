@@ -1,3 +1,20 @@
+<h1>[ngSwitch]</h1>
+<input type="text" #ngif ="ngModel" [(ngModel)]="nameP">
+
+<div [ngSwitch] = "nameP">
+  <p *ngSwitchCase = "'Juan'">
+    The person is Juan
+  </p>
+  <p *ngSwitchCase = "'Hola'">
+    The person is Hola
+  </p>
+  <p *ngSwitchDefault>
+    No match
+  </p>
+
+</div>
+
+
 <h1>*ngFor Objs</h1>
 
 <div>

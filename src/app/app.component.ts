@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
@@ -10,13 +11,15 @@ export class AppComponent {
 
   arrayEmos: string[] =[ '😂' , '🐦', '🐳','🌮', '💚']
   newEmoji: string;
+  nameP: string;
 
-  products = [
+  products :Product[] =[
     {
       name: 'EL mejor juguete',
       price: 565,
       image: './assets/images/toy.jpg',
-      category: 'all',
+      category: 'all'
+
     },
     {
       name: 'Bicicleta casi nueva',
@@ -44,6 +47,7 @@ export class AppComponent {
       image: './assets/images/glasses.jpg'
     }
   ]
+
 
   btnStatus = false;
   progressValor = 33;
